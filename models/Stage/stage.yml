@@ -1,0 +1,4 @@
+mkmail:
+  models:
+    - name: stg_customers
+      materialized: view

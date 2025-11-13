@@ -1,0 +1,28 @@
+
+  
+    
+
+create or replace transient table analytics.dhruv.nation_info
+    
+    
+    
+    as (with nation_info as (
+
+select 
+n.nation_id,
+n.nation_name,
+n.region_id,
+r.region_name,
+n.comment as nation_comment,
+r.comment as region_comment
+from analytics.dhruv.stg_nation_2 n
+join analytics.dhruv.stg_region r
+    on n.region_id = r.region_id
+)
+
+select * from nation_info
+    )
+;
+
+
+  
