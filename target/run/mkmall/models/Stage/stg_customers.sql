@@ -1,5 +1,5 @@
 
-  create or replace   view analytics.dbt_dhruv.stg_cutomers
+  create or replace   view analytics.dbt_dhruv.stg_customers
   
   
   

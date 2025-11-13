@@ -8,8 +8,8 @@ n.region_id,
 r.region_name,
 n.comment as nation_comment,
 r.comment as region_comment
-from {{ref('stg_nation_2')}} n
-join {{ref('stg_region')}} r
+from {{ref('stg_nations')}} n
+join {{ref('stg_regions')}} r
     on n.region_id = r.region_id
 )
 

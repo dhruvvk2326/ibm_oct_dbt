@@ -7,8 +7,8 @@ n.region_id,
 r.region_name,
 n.comment as nation_comment,
 r.comment as region_comment
-from analytics.dhruv.stg_nation_2 n
-join analytics.dhruv.stg_region r
+from analytics.dbt_dhruv.stg_nations n
+join analytics.dbt_dhruv.stg_regions r
     on n.region_id = r.region_id
 )
 

@@ -1,4 +1,54 @@
-mkmail:
-  models:
-    - name: stg_customers
-      materialized: view
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: nation_id
+        tests:
+          - relationships:
+              to: ref('stg_nations')
+              field: nation_id
+         
+  - name: stg_regions
+    columns:
+      - name: region_id
+        tests:
+          - unique
+          - not_null
+      - name: region_name
+        tests:
+          - accepted_values:
+             values: ['AFRICA','AMERICA','ASIA']
+
+  - name: stg_nations
+    columns:
+      - name: region_id
+        tests:
+          - relationships:
+              to: ref('stg_regions')
+              field: region_id
+      - name: nation_id
+        tests:
+          - unique
+          - not_null
+    
+  - name: stg_orders
+    columns:
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('customers')
+              field: customer_id
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: status_code
+        tests:  
+          - accepted_values:
+              values: ['O','F','P']
+
+
+  

@@ -1,11 +1,4 @@
 
-  create or replace   view analytics.dbt_dhruv.stg_cutomers
-  
-  
-  
-  
-  as (
-    
 
 with customer as (
 select c_custkey as customer_id,
@@ -21,5 +14,3 @@ from sourcedb.mk_mall.customers
 )
 
 select * from customer
-  );
-
