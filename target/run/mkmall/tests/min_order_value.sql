@@ -5,8 +5,13 @@
       count(*) != 0 as should_error
     from (
       
-        select *
-        from analytics.dbt_dhruv_dbt_test__audit.accepted_values_stg_regions_region_name__AFRICA__AMERICA__ASIA
     
+  with orders as(
+    select * from analytics.dbt_dhruv.stg_orders
+)
+
+select order_id from orders where total_price <= 900
+  
+  
       
     ) dbt_internal_test

@@ -1,0 +1,35 @@
+
+  
+    
+
+create or replace transient table analytics.dbt_dhruv.stg_parts
+    
+    
+    
+    as (with source as (
+    select * from sourcedb.mk_mall.parts
+),
+
+changed as (
+    select
+        --ids
+        p_partkey as part_id,
+
+        --descriptions
+        p_name as name,
+        p_type as type,
+        p_size as size,
+        p_mfgr as manufacturer,
+        p_brand as brand,
+        p_comment as comment,
+        p_container as container,
+        p_retailprice as retail_price
+
+    from source
+)
+select * from changed
+    )
+;
+
+
+  

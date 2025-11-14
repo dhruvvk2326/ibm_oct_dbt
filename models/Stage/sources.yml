@@ -7,7 +7,9 @@ sources:
       - name: nations
       - name: regions
       - name: v_nations
+      - name: lineitems
       - name: orders
+      - name: parts
         config:
           freshness:
             warn_after: {count: 1, period: hour}  #
