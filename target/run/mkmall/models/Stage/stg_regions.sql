@@ -6,7 +6,9 @@ create or replace transient table analytics.dbt_dhruv.stg_regions
     
     
     
-    as (with region as (
+    as (
+
+with region as (
 select 
         r_regionkey as region_id,
        r_name as region_name,

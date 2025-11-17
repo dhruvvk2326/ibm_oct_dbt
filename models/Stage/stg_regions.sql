@@ -1,3 +1,5 @@
+{# config(schema='new1') #}
+
 with region as (
 select 
         r_regionkey as region_id,

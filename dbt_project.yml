@@ -33,3 +33,5 @@ models:
   mkmall:
     Stage:
       +materialized: table
+    Intermediate:
+      schema: mkmotors

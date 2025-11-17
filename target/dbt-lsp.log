@@ -1,0 +1,38 @@
+==================== 2025-11-14 08:32:39.461161 | 4acb3975-2ddb-4ce0-a361-94e0fb4b241c ====================
+08:32:39.463406 [info ]: Starting dbt LSP server
+08:32:39.463618 [info ]: Connecting to LSP client on port 8000
+08:32:39.470498 [info ]: Successfully connected to LSP client
+08:32:39.470546 [info ]: Creating LSP service...
+08:32:39.638470 [info ]: Creating LSP server...
+08:32:39.638523 [info ]: Starting LSP server...
+08:32:40.588648 [info ]: Cached model count updated: 8 models (estimate)
+08:32:40.847374 [error]: dbt1060: Ignored unexpected key 'schema'. Try '+schema' instead. YAML path: 'mkmall.Intermediate.schema'.
+  --> dbt_project.yml:36:15
+08:32:41.215573 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models\Stage\stage.yml:14:22
+08:32:41.227259 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models\Stage\stage.yml:42:22
+08:32:41.232905 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models\Stage\stage.yml:56:22
+08:32:41.243840 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models\Stage\stage.yml:64:23
+08:32:41.264597 [error]: dbt1060: Ignored unexpected key 'schema'. Try '+schema' instead. YAML path: 'mkmall.Intermediate.schema'.
+  --> dbt_project.yml:36:15
+08:32:41.333842 [warn ]: dbt1005: Ref 'customers' not found in project. Searched for 'mkmall.customers, customers'
+  --> generic_tests\relationships_stg_orders_ea624a80826c8a7f9bd15b85fd5d6316.sql:1:119
+08:32:41.336392 [info ]: Cached model count updated: 8 models (accurate)
+08:32:46.848490 [debug]: Query executed on node unknown:
+describe table "SOURCEDB"."MK_MALL"."CUSTOMERS"
+08:32:47.255567 [debug]: Query executed on node unknown:
+describe table "SOURCEDB"."MK_MALL"."LINEITEMS"
+08:32:47.679197 [debug]: Query executed on node unknown:
+describe table "SOURCEDB"."MK_MALL"."NATIONS"
+08:32:48.065166 [debug]: Query executed on node unknown:
+describe table "SOURCEDB"."MK_MALL"."PARTS"
+08:32:48.070266 [debug]: Query executed on node unknown:
+describe table "SOURCEDB"."MK_MALL"."ORDERS"
+08:32:48.507179 [debug]: Query executed on node unknown:
+describe table "MKMOTORS_DEV"."STAGING"."STG_EMPLOYEES"
+08:32:48.511827 [debug]: Query executed on node unknown:
+describe table "SOURCEDB"."MK_MALL"."REGIONS"
+08:32:49.662770 [info ]: Cached model count updated: 8 models (accurate)

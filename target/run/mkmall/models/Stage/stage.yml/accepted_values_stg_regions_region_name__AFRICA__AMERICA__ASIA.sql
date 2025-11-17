@@ -6,7 +6,7 @@
     from (
       
         select *
-        from analytics.dbt_dhruv_dbt_test__audit.accepted_values_stg_regions_region_name__AFRICA__AMERICA__ASIA
+        from analytics.dbt_dhruv_error.accepted_values_stg_regions_region_name__AFRICA__AMERICA__ASIA
     
       
     ) dbt_internal_test

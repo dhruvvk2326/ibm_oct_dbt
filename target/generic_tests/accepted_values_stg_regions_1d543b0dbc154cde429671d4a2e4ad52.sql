@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="region_name", config={"schema":"error","store_failures":true}, model=get_where_subquery(ref('stg_regions')), values=["AFRICA","AMERICA","ASIA"]) }}

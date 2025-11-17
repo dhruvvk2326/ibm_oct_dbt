@@ -16,4 +16,10 @@ sources:
             error_after: {count: 1, period: hour} #if same value error takes priority over warn
           loaded_at_field: o_orderdate::timestamp_ntz
 
+  - name: src2
+    database: mkmotors_dev
+    schema: staging
+    tables:
+      - name: stg_employees
+
       

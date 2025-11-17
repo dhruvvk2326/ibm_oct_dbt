@@ -27,8 +27,9 @@ models:
           - accepted_values:
               arguments:
                 values: ['AFRICA','AMERICA','ASIA']
-                # config:
-                #   store_failures: true
+                config:
+                  store_failures: true
+                  schema: error
 
   - name: stg_nations
     description: "All nations with their regions"

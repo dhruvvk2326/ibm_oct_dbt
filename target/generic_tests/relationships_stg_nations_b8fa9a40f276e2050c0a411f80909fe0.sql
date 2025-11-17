@@ -1,0 +1,1 @@
+{{ test_relationships(column_name="region_id", field="region_id", model=get_where_subquery(ref('stg_nations')), to=ref('stg_regions')) }}
